@@ -1,0 +1,220 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+.main-btn {
+    color:var(--yellow-color);
+    background:var(--red-color) !important;
+    padding: .5rem 1rem ;
+}
+.main-btn:hover { 
+    color:white;
+}
+.main-title::after {
+    content:"";
+    position: absolute;
+    width:120px;
+    height:2px;
+    background:var(--green-color);
+    left:50%;
+    transform: translateX(-50%);
+    bottom:-20px;
+}
+body {
+    font-family: 'Roboto', sans-serif ;
+}
+/* Start Navbar  */
+.navbar {
+    background:var(--dark-color) !important;
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active , 
+.navbar .navbar-nav .nav-link:hover ,
+.navbar .navbar-nav .nav-link:focus {
+    color:var(--green-color);
+}
+.navbar .search {
+    border-left:1px solid var(--green-color) ;
+}
+.navbar .search svg {
+    color:var(--green-color) ;
+}
+.navbar .navbar-toggler {
+    color:white;
+    font-size: 25px;
+    border-color:white;
+}
+.navbar .navbar-toggler:focus { 
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color:var(--green-color);
+}
+/* End Navbar  */
+/* Start Landing  */
+.landing {
+    background:var(--dark-color);
+    min-height:calc(100vh - 72px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.landing h1 {
+    margin-top:0;
+}
+/* End Landing  */
+/* Start Features */
+.features .icon-holder {
+    height:200px;
+}
+.features .icon-holder svg {
+    left:50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder svg.number {
+    font-size: 12rem;
+    color:var(--section-color);
+}
+.features .icon-holder svg.icon {
+    color:var(--green-color);
+}
+.features .feat h4 {
+    color:var(--yellow-color);
+}
+/* End Features */
+/* Start Our-Work */
+.our-work {
+    background: var(--section-color);
+}
+.our-work ul .active {
+    background:var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li {
+    padding:.5rem 1rem ;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+    color:var(--red-color);
+}
+.our-work .box {
+    padding:5px;
+    position: relative;
+    overflow:hidden;
+}
+.our-work .box::before{
+    content:attr(data-work);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background:rgb(51 209 204 / 76%);
+    width:calc(100% - 10px);
+    height:calc(100% - 10px);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    transition: .3s;
+    left:-100%;
+}
+.our-work .box:hover::before {
+    top:5px;
+    left:5px;
+}
+/* End Our-Work */
+/* Start Stuff */
+.stuff .description {
+    max-width:500px;
+}
+@media (width < 992px) and (width > 767px){
+    .stuff div.text {
+        text-align: center;
+    }
+}
+/* End Stuff */
+/* Start Team */
+.team {
+    background:var(--section-color);
+}
+.team .container h2 {
+    color:var(--yellow-color);
+}
+.team .box h4 {
+    background:var(--green-color);
+}
+@media (width < 768px) {
+    .team img , 
+    .our-work img:not(.f-img){
+        width:100%;
+    }
+}
+/* End Team */
+/* Start Project */
+.project {
+    background:var(--dark-color);
+}
+/* End Project */
+/* Start Blog */
+@media (width < 992px) {
+    .row > [class^="col"]:not(:last-child) {
+        margin-bottom:2rem;
+    }
+}
+/* End Blog */
+/* Start Subscribe */
+.subscribe {
+    background:var(--yellow-color);
+}
+.subscribe input[type="email"]{
+    border:none;
+    /* color:white; */
+    border-bottom:1px solid white;
+}
+.subscribe input[type="email"]:focus {
+    outline: none;
+}
+.subscribe input[type="email"]::placeholder {
+    color:white;
+}
+.subscribe input[type="submit"] {
+    color:var(--yellow-color);
+    background: var(--dark-color);
+}
+/* End Subscribe */
+/* Start Footer */
+.footer {
+    background:var(--dark-color);
+}
+.footer .row > :first-child .copy-right :first-child span {
+    color:var(--green-color)
+}
+.footer .row > :first-child .copy-right :last-child span {
+    color:var(--yellow-color)
+}
+.footer .contact ul svg {
+    width:20px;
+    height:20px;
+}
+.footer .facebook {
+    background: #1877f2 ;
+}
+.footer .twitter {
+    background:#1da1f2 ;
+}
+.footer .linkedin {
+    background:#0a66c2 ;
+}
+.footer .youtube {
+    background:#ff0000 ;
+}
+.footer .links a {
+    color: (var(--bs-light-rgb),var(--bs-text-opacity)) !important;
+    text-decoration: none;
+}
+/* End Footer */
